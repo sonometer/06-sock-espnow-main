@@ -8,7 +8,7 @@
   see doc/README.md for further instructions
 
   Miercoles 3 de Enero de 2024.  
-  Se bajó de Notion el apk que se incluye en este repositorio bajo el directorio _android_.  
+  Se bajó de Notion el apk que se incluye en este repositorio bajo el directorio _android_ (Nota de último momento: ver README.md en _android_).  
 
   Reportado por Pablo a través de Eduardo Sacerdoti.  
   _sólo modifiqué el archivo websock.cpp e incorporé la librería <ArduinoJson.h> para manejar los elementos json_.  
