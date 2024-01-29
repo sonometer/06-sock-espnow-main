@@ -31,7 +31,7 @@
   A tal fin, se agregó un archivo que realiza dicha simulación y que se llama _target.cpp_ con su consabido archivo de prototipos _target.h_.  
   En el archivo _main_master.cpp_ se incluyó el archivo _target.cpp_; en la función _setup_ se llamó a _target_init_ para inicializar el funcionamiento y en la función _loop_ se agregó la llamada a _target_process_ con la finalidad de hacer _polling_ de la simulación. 
   El reporte a través de _Websocket_ se realiza desde la función _task_target_ (archivo _target.cpp_) que, cada vez que tiene que reportar, llama a _send_websock_ con el texto; dicho texto es _tgt,#_ donde # es un solo dígito que puede ser _*0*_, si el blanco no fué impactado y _*1*_ si lo fué.  
-  Teniendo en cuenta que quien escribe no entiende casi nada de _javascript_, generó la función dentro del archivo _websock.cpp_ denominada _send_websock_ que, por el momento en la línea 95 solo imprime; habria que ciambiar ahi por el código adecuado para que sea tratado en el nivel superior.
+  Teniendo en cuenta que quien escribe no entiende casi nada de _javascript_, generó la función dentro del archivo _websock.cpp_ denominada _send_websock_ que, por el momento en la línea 95 solo imprime; habria que cambiar ahi por el código adecuado para que sea tratado en el nivel superior.
 
 ### Sugerencias para la ejecución
 
@@ -43,5 +43,5 @@
   1. Compilar y cargar el programa con el comando de PlatformIO siguiente: _pio run -e master -t upload_.  
   2. Una vez cargado el programa, cargar el programa monitor mediante el comando de PlatformIO siguiente: _pio run -e master -t monitor_.  
   3. Se verá cada segundo la información que se produce para enviar el estado del blanco.  
-  4. Si se desea ver la página de Websocks, se debe abrir un _browser_ y poner el siguiente URL _robot.local_; se observarán la tipica págica ya conocida con el deslizante
+  4. Si se desea ver la página de Websocks, se debe abrir un _browser_ y poner el siguiente URL _robot.local_; se observarán la tipica página ya conocida con el deslizante
 
