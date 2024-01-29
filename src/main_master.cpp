@@ -12,6 +12,7 @@
 #include "wifi_ruts.h"
 #include "websock.h"
 #include "espnow_master.h"
+#include "target.h"
 
 #include <WiFi.h>
 
@@ -29,6 +30,7 @@ setup( void )
     led_init();
     wifi_connect(WIFI_MODE);
     dns_init(LOCAL);
+    target_init();
     websock_init();
     espnow_master_init();
 }
@@ -40,6 +42,6 @@ loop(void)
 
     if( ( bright = websock_test() ) > 0 && espnow_master_send(bright) )
         led_toggle();
+    target_process();
     delay(5);
-
 }

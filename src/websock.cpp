@@ -89,6 +89,12 @@ void websock_init(void)
     webSocket.onEvent(webSocketEvent);
 }
 
+void
+send_websock(const char *p)
+{
+    Serial.printf("%s: \"%s\"\n", __FUNCTION__, p);
+}
+
 int websock_test(void)
 {
     webSocket.loop();
